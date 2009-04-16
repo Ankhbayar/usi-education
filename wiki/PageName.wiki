@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary SVN тэй ажиллах тараал зааварийн бичнэ үү.
 
 = SVN тэй ажиллах заавар =
 
