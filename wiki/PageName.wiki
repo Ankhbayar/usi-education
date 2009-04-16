@@ -1,0 +1,8 @@
+#summary One-sentence summary of this page.
+
+= SVN тэй ажиллах заавар =
+
+SVN тэй ажиллах заавар.
+
+----
+Удахгүй гүйцээж бичнэ. 
