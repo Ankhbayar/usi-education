@@ -1,13 +1,22 @@
 #summary Manaihaan hurdan duusgay aa!!
 
-= Introduction =
+= taniltsii ohindoo Nomuun bishrelt =
 
-Add your content here.
+if (Temdeg.equals("*")){
+
+			result = Num * Num1;
+
+			Edit.setText(df.format(result));
+
+			Num = 0;
+
+			Num1 = 0;
+
+			Temdeg = "";
+
+			result = 0;
+
+			Yes = true;
 
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+}
