@@ -1,0 +1,13 @@
+               txt = new JTextField("");
+			txt.setBounds(15,10,230,40);
+			txt.setBackground(Color.yellow);
+			txt.setHorizontalAlignment(JTextField.RIGHT);
+			btn = new JButton[17];
+			String[] btn1 = {"1", "2", "3", "/","4", "5", "6","*","7","8", "9", "-","0", ".", "=", "+","Aрилгах"};
+			
+			for(i=0;i<17;i++){
+				btn[i]=new JButton(btn1[i]);
+				btn[i].addActionListener(this);
+				btn[i].setBackground(Color.pink);
+			}
+			
