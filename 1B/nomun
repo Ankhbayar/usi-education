@@ -1,0 +1,6 @@
+else if(s.equals("1"))
+		{
+			s1+=1;
+			s2+=1;
+			txt.setText(s1);
+		}	
