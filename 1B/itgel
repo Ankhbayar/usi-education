@@ -1,0 +1,13 @@
+		lbl.add(txt);
+			for(int i=0;i<17;i++)
+				frm.add(btn[i]);
+				frm.add(lbl);
+				frm.setVisible(true);			
+		}
+	
+	public static void main(String[] args) 
+	{
+		KeKe kk =new KeKe();
+		kk.ke();
+		
+	}
