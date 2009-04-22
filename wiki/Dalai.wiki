@@ -1,6 +1,7 @@
 #summary Manaihaan hurdan duusgay aa!!
+#labels Featured
 
-= taniltsii ohindoo Nomuun bishrelt =
+= Yaaj hiih uu? =
 
 if (Temdeg.equals("*")){
 
