@@ -1,0 +1,11 @@
+public void ke()
+		{
+			frm=new JFrame("USI тооны машин");
+			frm.setSize(270,300);
+            frm.setBackground(Color.orange);
+			lbl = new JLabel("");
+			String str=new String();
+			s1= " ";
+			String s2=new String();
+			s2= " ";
+			
