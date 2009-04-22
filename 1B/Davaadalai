@@ -1,0 +1,27 @@
+//--------------------Davaadalai Button,Frame,TextField,String zarlaj bui heseh-------------
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.awt.Color;
+
+public class KeKe implements ActionListener 
+{
+	private JFrame frm;
+	private JButton[] btn;
+	private JLabel lbl;
+	private JTextField txt;
+	char kkkk;
+	boolean kek=false;
+	int i=0;
+	double c,a,b;
+	String[] btn1;
+	String s1="";
+	String s2="";
+	
