@@ -1,0 +1,20 @@
+else if(s.equals("="))
+		{	a=Double.parseDouble(s2);
+			if(kkkk == '1')
+				b=c+a;
+	else if(kkkk =='2')
+				b=c-a;
+
+	else if(kkkk=='3')
+					b=c*a;
+
+	else if(kkkk=='4')
+					b=c/a;
+			 s1 = Double.toString(b);
+			txt.setText(s1);
+			System.out.println(b);
+			
+		}
+	}
+
+}
