@@ -243,6 +243,22 @@ public class Calendaar extends Applet
 
 			return (true);
 		}
+		public boolean handleEvent (Event e)//munhzul
+		{
+			if (e.target == year)
+			{
+				int		y = parseYear (year.getText ());
+
+				if ((y > 0) && (y != selectedYear))
+				{
+					selectedYear = y;
+					repaint ();
+				}
+			}
+
+			return super.handleEvent (e);
+		}
+}
 
 
 	
