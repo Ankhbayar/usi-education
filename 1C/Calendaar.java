@@ -179,6 +179,17 @@ public class Calendaar extends Applet
 			doMonth (selectedMonth, selectedYear);
 		}
 	}
+	public void setYear (int y)//togtoh
+	{
+		if (y > 999)
+			year.setText ("" + y);
+		else if (y > 99)
+			year.setText ("0" + y);
+		else if (y > 9)
+			year.setText ("00" + y);
+		else
+			year.setText ("000" + y);
+	}
 
 
 	
