@@ -229,6 +229,20 @@ public class Calendaar extends Applet
 
 			return (true);
 		}
+		if (e.target == month)//uguumur
+		{
+			int		m = month.getSelectedIndex ();
+
+			setYear (selectedYear);
+
+			if (m != selectedMonth)
+			{
+				selectedMonth = month.getSelectedIndex ();
+				repaint ();
+			}
+
+			return (true);
+		}
 
 
 	
