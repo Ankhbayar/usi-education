@@ -231,7 +231,7 @@ public class Calendaar extends Applet
 		}
 		if (e.target == month)//uguumur
 		{
-			int		m = month.getSelectedIndex ();
+			int m = month.getSelectedIndex ();
 
 			setYear (selectedYear);
 
@@ -243,6 +243,22 @@ public class Calendaar extends Applet
 
 			return (true);
 		}
+		if (e.target == year)
+		{
+			int y = parseYear (year.getText ());
+
+			if ((y > 0) && (y != selectedYear))
+			{
+				selectedYear = y;
+				repaint ();
+			}
+
+			return (true);
+		}
+
+		return (false);
+	}
+
 		public boolean handleEvent (Event e)//munhzul
 		{
 			if (e.target == year)
