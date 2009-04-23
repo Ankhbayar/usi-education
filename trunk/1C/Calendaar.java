@@ -190,6 +190,45 @@ public class Calendaar extends Applet
 		else
 			year.setText ("000" + y);
 	}
+	public boolean action (Event e, Object o)//munhuu
+	{
+		if (e.target == previous)
+		{
+			if ((selectedYear > 1) || (selectedMonth > 0))
+			{
+				selectedMonth--;
+				if (selectedMonth < 0)
+				{
+					selectedMonth = 11;
+					selectedYear--;
+				}
+
+				month.select (selectedMonth);
+				setYear (selectedYear);
+				repaint ();
+			}
+
+			return (true);
+		}
+
+		if (e.target == next)
+		{
+			if ((selectedYear < 9999) || (selectedMonth < 11))
+			{
+				selectedMonth++;
+				if (selectedMonth > 11)
+				{
+					selectedMonth = 0;
+					selectedYear++;
+				}
+
+				month.select (selectedMonth);
+				setYear (selectedYear);
+				repaint ();
+			}
+
+			return (true);
+		}
 
 
 	
