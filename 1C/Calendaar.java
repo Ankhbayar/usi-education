@@ -115,6 +115,17 @@ public class Calendaar extends Applet
 
 		drawMonth (startOfMonth % 7, daysInMonth, special);
 	}
+	public int parseYear (String y)//ganbii
+	{
+		if ((y.length () == 4)
+		  && (y.charAt(0) >= '0') && (y.charAt(0) <= '9')
+		  && (y.charAt(1) >= '0') && (y.charAt(1) <= '9')
+		  && (y.charAt(2) >= '0') && (y.charAt(2) <= '9')
+		  && (y.charAt(3) >= '0') && (y.charAt(3) <= '9'))
+			return (Integer.parseInt (y));
+		else
+			return (-1);
+	}
 
 	
 	
