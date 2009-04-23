@@ -20,7 +20,7 @@ public class Calendaar extends Applet
 	int			monthDays [] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	int			leapDays [] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	FontMetrics	metrics;
-	public static void main (String args[])//byasaaa
+	public static void main (String args[])//bayasaaa
 	{
 
 		Frame	f1;
@@ -56,4 +56,46 @@ public class Calendaar extends Applet
 
 		return (false);
 	}
+	public void drawMonth (int startDay, int nDays, boolean special)//tsolmon.ne
+	{
+		int		i;
+		int		col = startDay + 1;
+		int		row = 2;
+		int		x;
+		int		y;
+		String	s;
+
+		for (i = 1; i <= nDays; i++)
+		{
+			if (special && (i == 5))
+				i += 10;	
+
+			s = "" + i;
+
+			x = col * colWidth - metrics.stringWidth (s);
+			y = row * rowHeight;
+
+			screenG.drawString (s, x, y);
+
+			col++;
+			if (col > 7)
+			{
+				col = 1;
+				row++;
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
