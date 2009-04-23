@@ -1,0 +1,9 @@
+text.addMouseListener(new MouseAdapter() 
+		{
+		  	public void mousePressed(MouseEvent evt) {
+		  	   if(evt.isPopupTrigger()) 
+		  	   {
+		      	menu.show(evt.getComponent(), evt.getX(), evt.getY());
+		   	}
+		   }
+
