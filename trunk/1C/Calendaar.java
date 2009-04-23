@@ -85,7 +85,37 @@ public class Calendaar extends Applet
 			}
 		}
 	}
-	
+	public void doMonth (int month, int year)//baba
+	{
+		boolean	leap = leapYear (year);
+		int		daysInMonth;
+		int		startOfMonth;
+		int		y = year - 1;
+		int		i;
+		boolean	special = ((year == 1582) && (month == 9));
+		boolean pre = ((year < 1582) || ((year == 1582) && (month <= 9)));
+
+		if (pre)
+			startOfMonth = 6 + y + (y / 4);
+		else
+			startOfMonth = 1 + y + (y / 4) - (y / 100) + (y / 400);
+
+		if (leap)
+		{
+			daysInMonth = leapDays [month];
+			for (i = 0; i < month; i++)
+				startOfMonth += leapDays [i];
+		}
+		else
+		{
+			daysInMonth = monthDays [month];
+			for (i = 0; i < month; i++)
+				startOfMonth += monthDays [i];
+		}
+
+		drawMonth (startOfMonth % 7, daysInMonth, special);
+	}
+
 	
 	
 	
