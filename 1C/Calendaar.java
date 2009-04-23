@@ -126,6 +126,48 @@ public class Calendaar extends Applet
 		else
 			return (-1);
 	}
+	public void init ()//badrah
+	{
+		dimension = size ();
+		colWidth = dimension.width / 8;
+		rowHeight = dimension.height / 7;
+
+		today = new Date ();
+		thisMonth = today.getMonth ();
+		thisYear = today.getYear () + 1900;
+
+		selectedMonth = thisMonth;
+		selectedYear = thisYear;
+
+		previous = new Button ("Previous Month");
+		add (previous);
+
+		month = new Choice ();
+		month.addItem ("January");
+		month.addItem ("February");
+		month.addItem ("March");
+		month.addItem ("April");
+		month.addItem ("May");
+		month.addItem ("June");
+		month.addItem ("July");
+		month.addItem ("August");
+		month.addItem ("September");
+		month.addItem ("October");
+		month.addItem ("November");
+		month.addItem ("December");
+		month.select (thisMonth);
+		add (month);
+
+		year = new TextField ("" + thisYear, 4);
+		add (year);
+
+		next = new Button ("Next Month");
+		add (next);
+
+		screenG = getGraphics ();
+		metrics = screenG.getFontMetrics ();
+	}
+
 
 	
 	
