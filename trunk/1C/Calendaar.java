@@ -167,6 +167,18 @@ public class Calendaar extends Applet
 		screenG = getGraphics ();
 		metrics = screenG.getFontMetrics ();
 	}
+	public void paint (Graphics g)//buyaa
+	{
+		if (screenG != null)
+		{
+		
+			Point p = month.location ();
+			g.clearRect (0, 0, dimension.width, dimension.height);
+			month.move (p.x, (p.y & -2) + (selectedMonth & 1));
+
+			doMonth (selectedMonth, selectedYear);
+		}
+	}
 
 
 	
