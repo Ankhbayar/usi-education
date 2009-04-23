@@ -21,26 +21,39 @@ public class Calendaar extends Applet
 	int			leapDays [] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	FontMetrics	metrics;
 	public static void main (String args[])//byasaaa
-		{
+	{
 
-			Frame	f1;
-			Calendaar	c1;
+		Frame	f1;
+		Calendaar	c1;
 
-			c1 = new Calendaar();
-			c1.setLayout (new FlowLayout());
+		c1 = new Calendaar();
+		c1.setLayout (new FlowLayout());
 
-			f1 = new Frame ("Perpetual Calendaar");
-			f1.resize (375, 350);
-			f1.add ("Center", c1);
-			f1.show();
+		f1 = new Frame ("Perpetual Calendaar");
+		f1.resize (375, 350);
+		f1.add ("Center", c1);
+		f1.show();
 
-			c1.init();
-			c1.start();
-			c1.getLayout().layoutContainer (c1);
-		}
+		c1.init();
+		c1.start();
+		c1.getLayout().layoutContainer (c1);
+	}
 
-		public String getAppletInfo ()
-		{
-			return ("USI 1V ANGIIHAN");
-		}
+	public String getAppletInfo ()
+	{
+		return ("USI 1V ANGIIHAN");
+	}
+	public boolean leapYear (int year)//baska
+	{
+		if ((year % 400) == 0)
+			return (true);
+
+		if ((year > 1582) && ((year % 100) == 0))
+			return (false);
+
+		if ((year % 4) == 0)
+			return (true);
+
+		return (false);
+	}
 
