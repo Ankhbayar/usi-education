@@ -1,0 +1,32 @@
+diff -Nur gcalctool-5.21.90/configure.in gcalctool-5.21.90.new/configure.in
+--- gcalctool-5.21.90/configure.in	2008-01-28 16:13:51.000000000 +0100
++++ gcalctool-5.21.90.new/configure.in	2008-02-21 22:25:28.000000000 +0100
+@@ -18,7 +18,7 @@
+ AC_SUBST(ATK_CFLAGS)
+ AC_SUBST(ATK_LIBS)
+ 
+-pkg_modules="gtk+-2.0 >= 2.11.6 gobject-2.0 gdk-x11-2.0 glib-2.0 atk gdk-pixbuf-2.0 libglade-2.0"
++pkg_modules="gtk+-2.0 >= 2.11.6 gobject-2.0 gdk-x11-2.0 glib-2.0 atk gdk-pixbuf-2.0 libglade-2.0  launchpad-integration"
+ PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+ AC_SUBST(PACKAGE_CFLAGS)
+ AC_SUBST(PACKAGE_LIBS)
+diff -Nur gcalctool-5.21.90/gcalctool/gtk.c gcalctool-5.21.90.new/gcalctool/gtk.c
+--- gcalctool-5.21.90/gcalctool/gtk.c	2008-01-25 20:30:09.000000000 +0100
++++ gcalctool-5.21.90.new/gcalctool/gtk.c	2008-02-21 22:37:07.000000000 +0100
+@@ -30,6 +30,7 @@
+ #include <gdk/gdkx.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <glade/glade.h>
++#include <launchpad-integration.h>
+ 
+ #include "ui.h"
+ 
+@@ -2728,6 +2729,8 @@
+     set_menubar_tooltip("help_menu");
+     set_menubar_tooltip("about_menu");
+ 
++    launchpad_integration_add_items (gtk_widget_get_parent(GET_WIDGET("help_menu")), -1, TRUE, TRUE);
++
+     // ???
+     widget = GET_WIDGET("kvbox");
+     gtk_widget_set_direction(widget, GTK_TEXT_DIR_LTR);

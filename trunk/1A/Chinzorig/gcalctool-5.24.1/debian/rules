@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+
+DEB_CONFIGURE_SCRIPT_ENV += LDFLAGS="-Wl,-z,defs -Wl,-O1 -Wl,--as-needed"
+DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper
+
+binary-install/gcalctool::
+	ln -s gcalctool.1.gz debian/gcalctool/usr/share/man/man1/gnome-calculator.1.gz
+	install -d debian/gcalctool/usr/share/pixmaps
+	cp debian/gcalctool.xpm debian/gcalctool/usr/share/pixmaps/gcalctool.xpm
+binary-post-install/gcalctool::
+	rm -rf debian/gcalctool/var
+
+clean::
+	rm -f gcalctool/libparser.a
+

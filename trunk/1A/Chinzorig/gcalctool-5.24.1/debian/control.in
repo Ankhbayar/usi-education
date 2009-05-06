@@ -1,0 +1,18 @@
+Source: gcalctool
+Section: math
+Priority: optional
+XSBC-Original-Maintainer: Sebastien Bacher <seb128@debian.org>
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Uploaders: @GNOME_TEAM@
+Build-Depends: cdbs, debhelper (>= 5), libgtk2.0-dev (>= 2.11.6), libgconf2-dev (>=2.6.1-2), scrollkeeper, gnome-pkg-tools (>= 0.10), libxml-parser-perl, flex, bison, gnome-doc-utils (>= 0.3.2), liblaunchpad-integration-dev, libglade2-dev
+Standards-Version: 3.7.3
+
+Package: gcalctool
+Conflicts: gnome-utils (<< 2.4)
+Replaces: gnome-utils (<< 2.4)
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A GTK2 desktop calculator
+ gcalctool is a powerful graphical calculator with financial, logical and 
+ scientific modes. It uses a multiple precision package to do its arithmetic 
+ to give a high degree of accuracy.

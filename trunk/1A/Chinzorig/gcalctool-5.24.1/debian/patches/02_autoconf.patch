@@ -1,0 +1,12 @@
+diff -Nur gcalctool-5.21.90/configure gcalctool-5.21.90.new/configure
+--- gcalctool-5.21.90/configure	2008-01-28 16:15:35.000000000 +0100
++++ gcalctool-5.21.90.new/configure	2008-02-20 23:55:38.000000000 +0100
+@@ -6367,7 +6367,7 @@
+ 
+ 
+ 
+-pkg_modules="gtk+-2.0 >= 2.11.6 gobject-2.0 gdk-x11-2.0 glib-2.0 atk gdk-pixbuf-2.0 libglade-2.0"
++pkg_modules="gtk+-2.0 >= 2.11.6 gobject-2.0 gdk-x11-2.0 glib-2.0 atk gdk-pixbuf-2.0 libglade-2.0 launchpad-integration"
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for PACKAGE" >&5
