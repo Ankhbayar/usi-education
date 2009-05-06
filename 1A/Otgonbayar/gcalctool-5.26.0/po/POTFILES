@@ -1,0 +1,14 @@
+	../gcalctool/calctool.c \
+	../gcalctool/display.c \
+	../gcalctool/dsfuns.c \
+	../gcalctool/functions.c \
+	../gcalctool/get.c \
+	../gcalctool/gtk.c \
+	../gcalctool/mp.c \
+	../gcalctool/mp-convert.c \
+	../gcalctool/mp-trigonometric.c \
+	../gcalctool/mp-binary.c \
+	../gcalctool/register.c \
+	../gcalctool.desktop.in \
+	../glade/financial.glade \
+	../glade/gcalctool.glade
